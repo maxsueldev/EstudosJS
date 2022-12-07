@@ -13,6 +13,10 @@
 // const [idadePessoa1, idadePessoa2] = idadesDaquiADoisAnos; 
 // console.log(`Daqui a dois anos, ${pessoa[0].nome} terá ${idadePessoa1} anos e ${pessoa[1].nome} terá ${idadePessoa2} anos!`);
 
+// const frutas = ['Banana', 'maça', 'Uva', "Pêra", 'kiwi'];
+// const frutasFiltro = frutas.filter(fruta => fruta.length == 4);
+// console.log(frutasFiltro);
+
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 const precos = [
@@ -36,16 +40,19 @@ const precos = [
 
 // console.log(precosFiltro);
 
-// const frutas = ['Banana', 'maça', 'Uva', "Pêra", 'kiwi'];
-// const frutasFiltro = frutas.filter(fruta => fruta.length == 4);
-// console.log(frutasFiltro);
-
 const NumerosFiltro = precos.map(preco => preco.replace("R$ ", ""));
 const somenteStringNumeros = NumerosFiltro.filter(preco => preco.replace(/[^0-9]/g,''));
 const somenteNumber = somenteStringNumeros.map(preco => Number(preco));
 const somaNumeros = somenteNumber.reduce((somaParcial, num) => somaParcial + num);
 
+const somaNumerosReduzido = precos.map(preco => preco.replace("R$ ", ""))
+                          .filter(preco => preco.replace(/[^0-9]/g,''))
+                          .map(preco => Number(preco))
+                          .reduce((somaParcial, num) => somaParcial + num);
+
 console.log(NumerosFiltro);
 console.log(somenteStringNumeros);
 console.log(somenteNumber);
 console.log(somaNumeros);
+console.log(somaNumerosReduzido);
+
