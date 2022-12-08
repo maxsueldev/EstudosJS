@@ -56,3 +56,25 @@ console.log(somenteNumber);
 console.log(somaNumeros);
 console.log(somaNumerosReduzido);
 
+
+const carros = ["Mustang Ford", "Onix Chevrolet", "EcoSport Ford", "Territory Ford", "Fiesta Ford", "Tracker Chevrolet"];
+const consertCarros = carros.map(carro => carro.replace(" ", " = "));
+//console.log(consertCarros);
+let carrosFord = consertCarros.filter(carro => carro.includes("Ford"));   
+let carrosChevrolet = consertCarros.filter(carro => carro.includes("Chevrolet"));   
+
+const removeNomeFabricante = fabricante => {
+    if(fabricante == carrosFord) {
+        return fabricante.map(carro => carro.replace(" = Ford", ""));
+    } else if(fabricante == carrosChevrolet) {
+        return fabricante.map(carro => carro.replace(" = Chevrolet", ""));
+    }
+} 
+
+carrosFord = removeNomeFabricante(carrosFord);
+carrosChevrolet = removeNomeFabricante(carrosChevrolet);
+
+console.log(carrosFord);
+console.log(carrosChevrolet);
+
+
