@@ -20,3 +20,20 @@ console.log(retornaAlgunsDados(cliente));
 //TODO: Pegar o primeiro (e o terceiro) elemento do Array de valores;
 const [val1, , val3] = valores;
 console.log(val1, val3);
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+//Itens aninhados:
+
+const obj = {
+    prop1: {
+        innerProp1: 1
+    }
+}
+
+const {prop1: {innerProp1}} = obj;
+
+
+const hexColors = ["#FF00FF", ["#FF0D0D", "#0AFA00", "#011EFA"], "#7BF0FF"];
+const [, [red, green, blue]] = hexColors;
