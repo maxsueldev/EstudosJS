@@ -56,6 +56,7 @@ console.log(somenteNumber);
 console.log(somaNumeros);
 console.log(somaNumerosReduzido);
 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx;
 
 const carros = ["Mustang Ford", "Onix Chevrolet", "EcoSport Ford", "Territory Ford", "Fiesta Ford", "Tracker Chevrolet"];
 const consertCarros = carros.map(carro => carro.replace(" ", " = "));
@@ -76,5 +77,6 @@ carrosChevrolet = removeNomeFabricante(carrosChevrolet);
 
 console.log(carrosFord);
 console.log(carrosChevrolet);
+
 
 
