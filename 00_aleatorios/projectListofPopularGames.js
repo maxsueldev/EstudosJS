@@ -1,12 +1,3 @@
-const gamesArr = ["Horizon: Forbidden West", "The Last Of Us: Part 2", "Crysis 3", "Fifa 23"];
-const [game1, , , game4] = gamesArr;
-const [, ...allToNewArr] = gamesArr; 
-
-console.log(game1, game4);
-console.log(allToNewArr);
-
-// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 let games = [];
 class GameObj {
     constructor(name, developer, genre, distributor) {
@@ -37,16 +28,21 @@ const gameFifa = new GameObj("Fifa 23",
                              "Sport", 
                              "Eletronic Arts");
 
+const gameDeadRelics = new GameObj("Dead Relics",
+                                    "Maxsuel Fernando",
+                                    "Horror Puzzle",
+                                    "onUnity");
+
 let { name: nameGame, genre: genreGame } = gameFifa;
-console.log(`This game is ${nameGame} and your genre is ${genreGame}`);
+// console.log(`This game is ${nameGame} and your genre is ${genreGame}`);
+
+
+const gamesWithoutSpecialCharacters = games.map(game => game.name.replace(/\s|[0-9_]|\W|[#$%^&*()]/g, ""));
+const gamesSony = games.filter(game => game.distributor.includes("Sony"));
 
 console.log(games);
 
-const gamesWithoutSpecialCharacters = games.map(game => game.name.replace(/\s|[0-9_]|\W|[#$%^&*()]/g, ""));
-console.log(gamesWithoutSpecialCharacters);
 
-const gamesSony = games.filter(game => game.distributor.includes("Sony"));
-console.log(gamesSony);
 
 
 // let gamesNames = games.reduce((acumulator, initialValue) => [...acumulator, ...initialValue.name]);
