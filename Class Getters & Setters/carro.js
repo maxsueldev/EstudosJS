@@ -17,7 +17,8 @@ class Carro {
     }
     encherCombustivel() {
         if(this.comb == 100) {
-            return "O combustível já está cheio";
+            console.log("O combustível já está cheio");
+            return;
         }
         this.comb = 100;
     }
@@ -25,11 +26,17 @@ class Carro {
         return this._comb;
     }
     set comb(value) {
+        if(value > 100) {
+            console.log("O valor máximo do combustível é 100! Combustível não alterado");
+            return;    
+        }
         this._comb = value;
     }
 }
 
 const carro1 = new Carro("Honda", "HRV", "Prata");
 // console.log(carro1);
-carro1.comb = 80;
+// carro1.comb = 120;
+// carro1.comb = 100;
+// carro1.encherCombustivel();
 console.log(carro1.info());
