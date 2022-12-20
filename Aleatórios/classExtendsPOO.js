@@ -30,7 +30,7 @@ class Developer extends Person {
         this._usingLanguage = usingLanguage;
     }
     code() {
-        return `${this._name} is coding!`;
+        return `${this._name} is coding in ${this._usingLanguage}!`;
     }
 }
 
