@@ -10,7 +10,7 @@ class Pessoa {
 }
 
 class Aluno extends Pessoa {
-    constructor(boletim) {    // USE Boletim ???
+    constructor(boletim) {    // USE Boletim Class ???
         super();
         this.boletim = boletim;
     }
@@ -76,8 +76,16 @@ class Boletim {
 }
 
 class Nota {
+    #valor;
+    
     constructor(valor) {
-        this.valor = valor;
+        this.#valor = valor;
+    }
+    get valor() {
+        return this.#valor;
+    }
+    toString() {
+        return this.valor.toString();
     }
 }
 
@@ -96,3 +104,7 @@ class Nota {
 // gerente1.saldo = 2500;
 // gerente1.getPagamento();
 // console.log(gerente1.relatorio());
+
+const nota1 = new Nota(7.5);
+console.log(typeof nota1.toString());
+console.log(typeof nota1.valor);
