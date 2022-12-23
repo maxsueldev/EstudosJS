@@ -12,6 +12,12 @@ console.log(byTagName);  //HTMLCollection
 
 //QuerySelector - QuerySelectorAll  (Possibilita seleção como no CSS)
 const divList = document.querySelector("#root .div-list");  
-const selectorAll = divList.querySelectorAll("li");
+const selectorAllLi = divList.querySelectorAll("li");
 console.log(divList);
-console.log(selectorAll);  //NodeList
+console.log(selectorAllLi);  //NodeList
+
+selectorAllLi.forEach(value => value.textContent = "alterado");
+selectorAllLi[0].innerText = "ok";
+
+const ul = divList.querySelector("ul");
+// ul.innerHTML = "<li></li>";
