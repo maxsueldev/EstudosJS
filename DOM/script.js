@@ -21,3 +21,8 @@ selectorAllLi[0].innerText = "ok";
 
 const ul = divList.querySelector("ul");
 // ul.innerHTML = "<li></li>";
+
+//Alterando estilos
+divList.style.backgroundColor = "#fff00f";
+divList.style.color = "red";
+
