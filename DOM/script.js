@@ -25,4 +25,12 @@ const ul = divList.querySelector("ul");
 //Alterando estilos
 divList.style.backgroundColor = "#fff00f";
 divList.style.color = "red";
+divList.style.border = "3px solid red";
+divList.style.borderRadius = "10px";
 
+//Children - Parent
+console.log(divList.parentElement);
+console.log(divList.parentNode);
+
+console.log(ul.childElementCount);
+console.log(ul.firstChild, ul.lastChild);
