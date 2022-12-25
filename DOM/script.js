@@ -28,7 +28,8 @@ divList.style.color = "red";
 divList.style.border = "3px solid red";
 divList.style.borderRadius = "10px";
 
-//Children - Parent
+//Children - Parent - Sibling
+
 // console.log(divList.parentElement);
 // console.log(divList.parentNode);
 
@@ -38,8 +39,22 @@ divList.style.borderRadius = "10px";
 ul.children[2].textContent = "alt";
 const todosFilhos = ul.children;  //HTMLCollection com todos os elementos filhos;
 console.log(divList.childNodes); //NodeList com todos os elementos filhos;
-console.log(primeiroFilho.item(2));  
-
+console.log(todosFilhos.item(2));  
 console.log(ul.childNodes[0]);
-ul.childNodes[0].textContent = "0"; 
+divList.childNodes[0].textContent = "0"; 
+console.log(ul.firstElementChild);
 
+selectorAllLi[0].nextSibling.textContent = "loo";
+
+// Criando elementos
+const iframe = document.createElement("iframe");
+iframe.src = "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement";
+iframe.width = "100px";
+iframe.height = "100px";
+
+document.querySelector(".div-list").append(iframe);
+
+// Attributes
+console.log(iframe.getAttribute("id"));
+iframe.setAttribute("id", "myFrame");
+iframe.removeAttribute("id");
