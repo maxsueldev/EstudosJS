@@ -31,3 +31,27 @@ const external = () => {
 
 console.log(external());
 
+/////////////////////////////////// Roger Melo [Youtube] /////////////////////
+const lexico = "lexico";
+const safe = secret => {
+    const local = "local";
+    console.log(lexico);
+}
+
+safe();
+
+///////////////Acessar valores fora do escopo de uma função///////////////
+
+let carro = {
+    ligado : false,
+    motor: "v8",
+    modelo: "Ford f100"
+}
+
+const getKeys = () => {
+    const {modelo, motor} = carro;
+    console.log(modelo, motor);
+} 
+
+getKeys();
+
