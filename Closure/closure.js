@@ -49,9 +49,21 @@ let carro = {
 }
 
 const getKeys = () => {
-    const {modelo, motor} = carro;
-    console.log(modelo, motor);
+    for(key in carro) {
+        console.log(key);
+    }
 } 
 
 getKeys();
 
+//////////////////////////////////////////////////////////////////
+
+function messageFunc() {
+    const message = "Hello World";
+    function getMessage() {
+        return messageFunc();
+    }
+    return message;
+}
+
+console.log(messageFunc());
