@@ -61,9 +61,9 @@ getKeys();
 function messageFunc() {
     const message = "Hello World";
     function getMessage() {
-        return messageFunc();
+        return message;
     }
-    return message;
+    return getMessage();
 }
 
 console.log(messageFunc());
