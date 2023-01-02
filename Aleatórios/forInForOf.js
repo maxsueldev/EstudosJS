@@ -21,6 +21,6 @@ for(let key in obj) {
 /////////////////////////////////////////////////////////////////////////////////
 
 const games = ["tlou2", "DeadRelics", "infamous"];
-for(let game of games) {  // for of não precisa colocar a posição (key) como games[key]
+for(let game of games) {  // for of não precisa colocar a posição (key) como em games[key]
     console.log(game);
 }
