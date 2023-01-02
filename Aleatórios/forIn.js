@@ -17,3 +17,10 @@ const obj = {
 for(let key in obj) {
     console.log(key);
 }
+
+/////////////////////////////////////////////////////////////////////////////////
+
+const games = ["tlou2", "DeadRelics", "infamous"];
+for(let game of games) {  // for of não precisa colocar a posição (key) como games[key]
+    console.log(game);
+}
